@@ -5,12 +5,17 @@ const elLoading = document.querySelector(".loading");
 
 axios.get(url).then((res) => {
   const data = res.data;
-  showProductHome(data.slice(0, 4));
-  showProduct(data);
+  if (elProductHome) {
+    showProductHome(data.slice(0, 4));
+  }
+
+  if (elProduct) {
+    showProduct(data);
+  }
 });
 
 function showProductHome(data) {
-  data.map((item) => {
+  data.forEach((item) => {
     elProductHome.innerHTML += `
     <div class="card">
           <img
@@ -24,9 +29,8 @@ function showProductHome(data) {
   });
 }
 
-showProduct(data);
 function showProduct(data) {
-  data.map((item) => {
+  data.forEach((item) => {
     elProduct.innerHTML += `
       <div class="card">
             <img
