@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | FakeStore</title>
+    <link rel="stylesheet" href="../styles/product.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <h1 class="logo">FakeStore</h1>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="#" class="active">Products</a>
+        <a href="#">About</a>
+      </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <h2>All Products</h2>
+      <p>Browse our modern fake store collection</p>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <input type="text" placeholder="Search product..." />
+      <select>
+        <option>All Categories</option>
+        <option>Men's Clothing</option>
+        <option>Women's Clothing</option>
+        <option>Electronics</option>
+        <option>Jewelry</option>
+      </select>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+      <div class="product-grid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 FakeStore. All rights reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="../main.js"></script>
+  </body>
+</html>
